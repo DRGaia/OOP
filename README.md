@@ -1,0 +1,2 @@
+# OOP
+Koulutyö Typescriptiä käyttäen.
