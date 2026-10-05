@@ -1,2 +1,1 @@
-# OOP
-Koulutyö Typescriptiä käyttäen.
+# TypeScript

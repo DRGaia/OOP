@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cute Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="floating-background">
+    <img src="build/images/cat1.jpg" alt="cat" class="float float1">
+    <img src="build/images/cat2.jpg" alt="cat" class="float float2">
+    <img src="build/images/cat3.jpg" alt="cat" class="float float3">
+    <img src="build/images/cat4.jpg" alt="cat" class="float float4">
+    <img src="build/images/cat5.jpg" alt="cat" class="float float5">
+    </div>
+
+  <div class="calculator">
+    <h2>Calc</h2>
+    <p>(short for calculator)</p>
+
+    <input id="num1" type="text" placeholder="First number">
+    <input id="num2" type="text" placeholder="Second number">
+
+    <select id="operation">
+      <option value="add">➕ Add</option>
+      <option value="subtract">➖ Subtract</option>
+      <option value="multiply">✖ Multiply</option>
+      <option value="divide">➗ Divide</option>
+    </select>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result">Result: </p>
+  </div>
+
+  <script src="./build/calc.js"></script>
+</body>
+</html>
