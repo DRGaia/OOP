@@ -1,22 +1,14 @@
 export {}
 
-// Objektin luominen suorakulmiolle (rectangle)
-const rectangle = {
-    x: 50,           // Vasemman yläkulman x-koordinaatti
-    y: 50,           // Vasemman yläkulman y-koordinaatti
-    width: 200,      // Leveys
-    height: 100      // Korkeus
-};
-
-// Canvas-elementti ja konteksti
+document.getElementById("myCanvas");
 const canvas = document.getElementById("myCanvas") as HTMLCanvasElement;
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getContext("2d")!
 
-// Tarkistetaan, että konteksti on olemassa
-if (ctx) {
-    // Asetetaan täyttöväri
-    ctx.fillStyle = "blue";
-    
-    // Piirretään suorakulmio käyttämällä rectangle-objektin ominaisuuksia
-    ctx.fillRect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
-}
+  if (ctx) {
+    ctx.beginPath();
+    ctx.moveTo(50, 50);
+    ctx.lineTo(200, 50);
+    ctx.lineTo(125, 150);
+    ctx.closePath(); 
+    ctx.stroke();
+  }

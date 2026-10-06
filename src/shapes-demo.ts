@@ -1,52 +1,49 @@
-export {}
+export { }
 
-const canvas = document.getElementById("myCanvas") as HTMLCanvasElement;
-const ctx = canvas.getContext("2d");
+const canvas: HTMLCanvasElement = document.getElementById("myCanvas") as HTMLCanvasElement
+const ctx: CanvasRenderingContext2D = canvas.getContext("2d")
 
-if (ctx) {
-    const rectangle = {
-        x: 50,
-        y: 50,
-        width: 200,
-        height: 100,
-        draw() {
-            ctx.fillRect(this.x, this.y, this.width, this.height);
-        }
-    };
+const xCenter: number = canvas.width / 2
+const yCenter: number = canvas.height / 2
 
-    const circle = {
-        x: 310,
-        y: 195,
-        radius: 40,
-        draw() {
-            ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fill();
-        }
-    };
+const rectangle = {
+    x: xCenter - 190,
+    y: yCenter - 90,
+    width: 400,
+    height: 200,
 
-    const rectangle2 = {
-        x: 280,
-        y: 35,
-        width: 90,
-        height: 75,
-        draw() {
-            ctx.fillRect(this.x, this.y, this.width, this.height);
-        }
-    };
+    draw: function() {
+        ctx.fillStyle = "#ffffffff",
+        ctx.fillRect(this.x, this.y, this.width, this.height)
+    }
+};
 
-    const rectangle3 = {
-        x: 40,
-        y: 190,
-        width: 110,
-        height: 70,
-        draw() {
-            ctx.fillRect(this.x, this.y, this.width, this.height);
-        }
-    };
+const rectangleBack = {
+    x: xCenter - 200,
+    y: yCenter - 100,
+    width: 420,
+    height: 220,
 
-    rectangle.draw();
-    circle.draw();
-    rectangle2.draw();
-    rectangle3.draw();
+    draw: function() {
+        ctx.fillStyle = "#bbbbbbff",
+        ctx.fillRect(this.x, this.y, this.width, this.height)
+    }
+};
+
+const circle = {
+  x: xCenter - -10,
+  y: yCenter - -10,
+  radius1: 70,
+  radius2: 0,
+  draw() {
+     ctx.fillStyle = "#DA291C"
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius1, circle.radius2, circle.radius1 * Math.PI)
+        ctx.fill();
+  }
 }
+
+rectangleBack.draw()
+rectangle.draw()
+
+circle.draw()
